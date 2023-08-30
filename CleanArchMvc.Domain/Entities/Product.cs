@@ -1,14 +1,14 @@
 ﻿namespace CleanArchMvc.Domain.Entities
 {
-    public class Product
+    public sealed class Product
     {
-        public int Id { get; set; }
-        public required string Name { get; set; }
-        public string? Descritpion { get; set; }
-        public decimal price { get; set; }
-        public int Stock { get; set; }
-        public string? Image { get; set; }
-        public int CategoryId { get; set; }
-        public Category? category { get; set; }
+        public int Id { get; private set; }
+        public string? Name { get; private set; }
+        public string? Descritpion { get; private set; }
+        public decimal price { get; private set; }
+        public int Stock { get; private set; }
+        public string? Image { get; private set; }
+        public int CategoryId { get; private set; }
+        public Category? category { get; private set; }
     }
 }
